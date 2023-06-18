@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeSwitcher from "./components/ThemeSwticher";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
           <span className="font-bold">Next.JS</span>
         </Link>
       </h2>
+      <ThemeSwitcher />
     </>
   );
 }
