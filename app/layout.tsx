@@ -1,4 +1,5 @@
 import "./globals.css";
+import Providers from "./providers";
 
 export const metadata = {
   title: "Blog app",
@@ -12,8 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <main>{children}</main>
+      <body className="dark:text-zinc-200 text-gray-900 dark:bg-slate-800">
+        <Providers>
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );

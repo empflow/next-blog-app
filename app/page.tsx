@@ -6,7 +6,7 @@ export default function Home() {
       <h1>Blog website</h1>
       <h2>
         Made with{" "}
-        <Link href="https://nextjs.org">
+        <Link href="https://nextjs.org" target="_blank">
           <span className="font-bold">Next.JS</span>
         </Link>
       </h2>
