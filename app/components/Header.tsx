@@ -2,13 +2,14 @@ import Link from "next/link";
 import GithubIcon from "../icons/Github";
 import InstagramIcon from "../icons/Instagram";
 import TwitterIcon from "../icons/Twitter";
+import Logo from "./Logo";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 border-b border-b-gray-400 bg-white/60 py-5 backdrop-blur-lg">
+    <header className="sticky top-0 z-10 border-b border-b-gray-400 bg-white/60 px-3 py-5 backdrop-blur-lg">
       <nav className="m-auto flex max-w-4xl justify-between">
         <Link href="/" style={{ textDecoration: "none" }}>
-          <h2 className="text-2xl font-semibold">empflow</h2>
+          <Logo />
         </Link>
         <div className="flex gap-2 md:gap-3">
           <Link href="https://github.com/empflow" target="_blank">

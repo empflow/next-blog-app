@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
 import Providers from "./providers";
@@ -17,7 +18,8 @@ export default function RootLayout({
       <body className="bg-gray-100 text-gray-900 dark:bg-slate-800 dark:text-zinc-200">
         <Providers>
           <Header />
-          <main className="m-auto max-w-4xl">{children}</main>
+          <main className="m-auto max-w-4xl px-3">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
