@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="text-gray-600">
+        <div className="text-gray-600 dark:text-gray-500">
           Copyright © 2023 Twitter Inc.
           <br />
           No rights reserved
