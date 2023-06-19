@@ -1,14 +1,10 @@
 import Link from "next/link";
+import MyAvatar from "./components/MyAvatar";
 import ThemeSwitcher from "./components/ThemeSwticher";
 
 export default function Home() {
   return (
     <>
-      <img
-        width={500}
-        height={500}
-        src="https://yt3.ggpht.com/ytc/AGIKgqPTYuxSA9QQBsfYGVm7ABKrQr2--Q8m_UdVqEmUkQ=s48-c-k-c0x00ffffff-no-rj"
-      />
       <h1>Blog website</h1>
       <h2>
         Made with{" "}
@@ -16,7 +12,7 @@ export default function Home() {
           <span className="font-bold">Next.JS</span>
         </Link>
       </h2>
-      <ThemeSwitcher />
+      <MyAvatar />
     </>
   );
 }

@@ -5,7 +5,7 @@ import TwitterIcon from "../icons/Twitter";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 border border-b-gray-400 bg-white/60 py-5 backdrop-blur-lg">
+    <header className="sticky top-0 z-10 border-b border-b-gray-400 bg-white/60 py-5 backdrop-blur-lg">
       <nav className="m-auto flex max-w-4xl justify-between">
         <Link href="/" style={{ textDecoration: "none" }}>
           <h2 className="text-2xl font-semibold">empflow</h2>
