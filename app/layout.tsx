@@ -5,7 +5,7 @@ import Providers from "./providers";
 
 export const metadata = {
   title: "Blog app",
-  description: "Blog made by @empflow",
+  description: "Made by @empflow on Github. Uses markdown for posts!",
 };
 
 export default function RootLayout({
