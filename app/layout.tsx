@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import "./globals.css";
 import Providers from "./providers";
 
@@ -15,7 +16,8 @@ export default function RootLayout({
     <html lang="en" className="">
       <body className="bg-gray-100 text-gray-900 dark:bg-slate-800 dark:text-zinc-200">
         <Providers>
-          <main>{children}</main>
+          <Header />
+          <main className="">{children}</main>
         </Providers>
       </body>
     </html>
