@@ -18,7 +18,9 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col bg-gray-100 text-gray-900 dark:bg-slate-800 dark:text-zinc-200">
         <Providers>
           <Header />
-          <main className="m-auto max-w-4xl flex-grow px-3">{children}</main>
+          <main className="m-auto h-full w-full max-w-4xl flex-grow px-3 py-10">
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>
