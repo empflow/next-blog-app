@@ -51,15 +51,16 @@ app.listen(3000, () => console.log("listening on port 3000"));
 ```
 
 28. open the terminal
-1. run `node ./index.js`
+1. run `node ./index.js` (make sure you have [node](https://nodejs.org) installed)
 1. open your browser
 1. if you're on mac, press `⌘ + l`. If on windows, press `ctrl + l`
 1. type `http://localhost:3000`
-1. your website is now if front of you
+1. press `Enter`
+1. your website is now in front of you
 1. you're done i guess
 
 ---
 
 alright thanks for reading
-this article took me like 10 minutes to write
-maybe 15 i dont know
+this article took me like 20 minutes to write
+maybe 22 i dont know
