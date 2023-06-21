@@ -1,15 +1,15 @@
 import getSortedPosts from "@/helpers/getSortedPosts";
-import Post from "./Post";
+import PostCard from "./PostCard";
 
 export default function HomepageRecentPosts() {
   const posts = getSortedPosts(3);
 
   return (
     <section>
-      <h2 className="mb-3 text-xl font-medium">Recent posts</h2>
+      <h2 className="mb-4 text-3xl font-medium">Recent posts</h2>
       <div className="flex flex-col gap-3">
         {posts.map((post) => (
-          <Post post={post} />
+          <PostCard post={post} />
         ))}
       </div>
     </section>

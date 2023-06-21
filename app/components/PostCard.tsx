@@ -1,11 +1,11 @@
 import formatStrDate from "@/utils/formatStrDate";
 import Link from "next/link";
 
-interface PostProps {
+interface PostCardProps {
   post: Post;
 }
 
-export default function Post({ post }: PostProps) {
+export default function PostCard({ post }: PostCardProps) {
   const formattedDate = formatStrDate(post.date);
 
   return (
