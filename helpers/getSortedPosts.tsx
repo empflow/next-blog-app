@@ -5,10 +5,10 @@ import strDatesToMsDates from "@/utils/strDatesToMsDates";
 
 const postsDir = path.join(process.cwd(), "posts");
 
-export default function getSortedPosts() {
+export default function getSortedPosts(limit?: number) {
   const postsFilenames = fs.readdirSync(postsDir);
   const allPosts = getAllPostsUnsorted(postsFilenames);
-  return sortPostsByDate(allPosts);
+  return sortPostsByDate(allPosts).slice(0, limit ?? allPosts.length);
 }
 
 function getAllPostsUnsorted(postsFilenames: string[]) {

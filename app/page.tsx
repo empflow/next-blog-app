@@ -2,7 +2,7 @@
 // utils dir = fns used in multiple places across the codebase
 
 import Link from "next/link";
-import Posts from "./components/Posts";
+import HomepageRecentPosts from "./components/HomepageRecentPosts";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         </Link>
       </p>
 
-      <Posts />
+      <HomepageRecentPosts />
     </>
   );
 }
