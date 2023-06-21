@@ -1,6 +1,6 @@
 ---
 title: "Two forms of pre-rendering"
-date: "2023-06-20"
+date: "21/06/2023"
 ---
 
 Uhh so basically the first form is when the content is generated **statically**.

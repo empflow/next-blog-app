@@ -1,6 +1,6 @@
 ---
 title: "70 days to make a website"
-date: "2023/20/06"
+date: "20/06/2023"
 ---
 
 # how to make a web SITE in 7O dayss
@@ -62,5 +62,5 @@ app.listen(3000, () => console.log("listening on port 3000"));
 ---
 
 alright thanks for reading
-this article took me like 20 minutes to write
+this post took me like 20 minutes to write
 maybe 22 i dont know

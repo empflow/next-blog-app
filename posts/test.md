@@ -1,3 +1,8 @@
+---
+title: "a post that tests most of Markdown's functionality"
+date: "19/06/2023"
+---
+
 <!-- hello this is a comment -->
 
 # Heading 1
