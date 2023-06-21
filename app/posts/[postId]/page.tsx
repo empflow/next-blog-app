@@ -1,4 +1,5 @@
 import getLatestPosts from "@/helpers/getLatestPosts";
+import getPost from "@/helpers/getPost";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -15,15 +16,18 @@ export async function generateMetadata({
   return { title: currPost.title };
 }
 
-export default function Post({ params: { postId } }: PostParams) {
+export default async function Post({ params: { postId } }: PostParams) {
   const posts = getLatestPosts();
-  const currPost = posts.find((post) => post.id === postId);
-  if (!currPost) return notFound();
+  const postExists = !!posts.find((post) => post.id === postId);
+  if (!postExists) return notFound();
+
+  const post = await getPost(postId);
 
   return (
     <>
-      <h1>{currPost.title}</h1>
-      <p>{currPost.date}</p>
+      <h1>{post.title}</h1>
+      <p>{post.date}</p>
+      <article dangerouslySetInnerHTML={{ __html: post.htmlContent }}></article>
     </>
   );
 }
