@@ -1,23 +1,21 @@
-import { readdirSync, readFileSync } from "fs";
+import fs from "fs";
 import path from "path";
-import { promisify } from "util";
 import matter from "gray-matter";
-import { nanoid } from "nanoid";
 import strDatesToMsDates from "@/utils/strDatesToMsDates";
 
 const postsDir = path.join(process.cwd(), "posts");
 
 export default function getSortedPosts() {
-  const postsFilenames = readdirSync(postsDir);
+  const postsFilenames = fs.readdirSync(postsDir);
   const allPosts = getAllPostsUnsorted(postsFilenames);
   return sortPostsByDate(allPosts);
 }
 
 function getAllPostsUnsorted(postsFilenames: string[]) {
   return postsFilenames.map((postFilename): Post => {
-    const id = `${postFilename.replace(/\.md$/, "")}-${nanoid(8)}`;
+    const id = postFilename.replace(/\.md$/, "");
     const pathToPost = path.join(postsDir, postFilename);
-    const postContent = readFileSync(pathToPost, "utf-8");
+    const postContent = fs.readFileSync(pathToPost, "utf-8");
     const matterResult = matter(postContent, { excerpt: true });
 
     return {

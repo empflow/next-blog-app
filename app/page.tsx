@@ -1,4 +1,3 @@
-"use client";
 // helper dir = fns used in a specific place in the codebase
 // utils dir = fns used in multiple places across the codebase
 

@@ -1,7 +1,9 @@
+import path from "path";
 import getSortedPosts from "@/helpers/getSortedPosts";
 
 export default function Posts() {
   const posts = getSortedPosts();
+
   return (
     <>
       <h2>Blog posts</h2>
