@@ -129,8 +129,10 @@ while (x) {
 console.log("Done!");
 ```
 
+lorem ipsum here is some paragraph text that does not have any real meaning
+
 ---
 
 ## images
 
-![](https://markdown-here.com/img/icon256.png)
+![](https://markdown-here.com/img/icon256.png "markdown logo")
