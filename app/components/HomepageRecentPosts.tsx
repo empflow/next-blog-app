@@ -8,8 +8,8 @@ export default function HomepageRecentPosts() {
     <section>
       <h2 className="mb-4 text-3xl font-medium">Recent posts</h2>
       <div className="flex flex-col gap-3">
-        {posts.map((post) => (
-          <PostCard post={post} />
+        {posts.map((post, i) => (
+          <PostCard post={post} key={i} />
         ))}
       </div>
     </section>
