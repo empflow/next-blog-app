@@ -16,7 +16,7 @@ function getAllPostsUnsorted(postsFilenames: string[]) {
     const id = postFilename.replace(/\.md$/, "");
     const pathToPost = path.join(postsDir, postFilename);
     const postContent = fs.readFileSync(pathToPost, "utf-8");
-    const matterResult = matter(postContent, { excerpt: true });
+    const matterResult = matter(postContent);
 
     return {
       id,
