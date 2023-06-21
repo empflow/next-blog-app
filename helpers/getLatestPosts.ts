@@ -2,10 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import strDatesToMsDates from "@/utils/strDatesToMsDates";
+import postsDir from "./postsDir";
 
-const postsDir = path.join(process.cwd(), "posts");
-
-export default function getSortedPosts(limit?: number) {
+export default function getLatestPosts(limit?: number) {
   const postsFilenames = fs.readdirSync(postsDir);
   const allPosts = getAllPostsUnsorted(postsFilenames);
   return sortPostsByDate(allPosts).slice(0, limit ?? allPosts.length);

@@ -1,8 +1,8 @@
-import getSortedPosts from "@/helpers/getSortedPosts";
+import getLatestPosts from "@/helpers/getLatestPosts";
 import PostCard from "./PostCard";
 
 export default function HomepageRecentPosts() {
-  const posts = getSortedPosts(3);
+  const posts = getLatestPosts(3);
 
   return (
     <section>
