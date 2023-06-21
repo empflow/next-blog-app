@@ -3,3 +3,7 @@ interface Post {
   title: string;
   date: string;
 }
+
+interface PostWithHtmlContent extends Post {
+  htmlContent: string;
+}
