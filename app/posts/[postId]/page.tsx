@@ -7,6 +7,11 @@ interface PostParams {
   params: { postId: string };
 }
 
+export async function generateStaticParams() {
+  const posts = getLatestPosts();
+  return posts.map((post) => ({ postId: post.id }));
+}
+
 export async function generateMetadata({
   params: { postId },
 }: PostParams): Promise<Metadata> {
