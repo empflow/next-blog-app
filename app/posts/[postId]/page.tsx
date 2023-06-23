@@ -36,6 +36,7 @@ export default async function Post({ params: { postId } }: PostParams) {
         prose
 
       text-gray-600
+      prose-headings:font-bold
       prose-headings:text-black
       prose-p:text-gray-600
       prose-a:font-semibold
@@ -61,8 +62,12 @@ export default async function Post({ params: { postId } }: PostParams) {
         dark:prose-tr:border-y-gray-600
         dark:prose-hr:border-gray-600
         "
-        dangerouslySetInnerHTML={{ __html: post.htmlContent }}
-      ></article>
+      >
+        <h1>{post.title}</h1>
+        <section
+          dangerouslySetInnerHTML={{ __html: post.htmlContent }}
+        ></section>
+      </article>
     </>
   );
 }
