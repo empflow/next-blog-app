@@ -13,4 +13,4 @@ its like in this quote by enstien albert:
 alright so the second form is when the server receives a request and then does some things to give some static html back to the client
 this is called **server-side-rendering** (_SSR_ for short)
 
-so yea guyz thanks for reading please subcripbe to my (myspace channel)[https://myspace.com/ryanvaldez] and smash that notification bell so that you'll never miss my new uploads
+so yea guyz thanks for reading please subcripbe to my [myspace channel](https://myspace.com/ryanvaldez) and smash that notification bell so that you'll never miss my new uploads
