@@ -3,20 +3,10 @@ title: "70 days to make a website"
 date: "20/06/2023"
 ---
 
-# how to make a web SITE in 7O dayss
-
 ##### so if you find yourself needing to make a site on the web in 70 days of less, here's what you should do:
 
 1. wake up
 1. make breakfast
-1. get out of the basement
-1. go to a local real estate agency
-1. buy an apartment
-1. go inside
-1. go outside
-1. ask somebody if they know an internet provider nearby
-1. repeat the above step until you find a person who knows an ISP nearby
-1. buy the cheapest plan
 1. buy a computer (preferrably running ARCH linux)
 1. open [this](https://youtube.com "This website is youtubee.com") website
 1. find an html tutorial
