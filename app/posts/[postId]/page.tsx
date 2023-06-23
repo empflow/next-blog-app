@@ -71,10 +71,3 @@ export default async function Post({ params: { postId } }: PostParams) {
     </>
   );
 }
-
-/*
-prose-code:text-black
-prose-pre:border
-prose-pre:border-gray-400
-prose-pre:bg-gray-200
-*/
