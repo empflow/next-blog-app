@@ -131,6 +131,18 @@ console.log("Done!");
 
 lorem ipsum here is some paragraph text that does not have any real meaning
 
+hello world
+
+_hello world_
+
+**hello world**
+
+~~_hello world_~~
+
+~~**hello world**~~
+
+~~**_hello world_**~~
+
 ---
 
 ## images
