@@ -10,7 +10,7 @@ export default function PostCard({ post }: PostCardProps) {
 
   return (
     <div className="flex flex-col gap-0">
-      <Link href={`/posts/${post.id}`}>
+      <Link href={`/posts/${post.id}`} className="mb-1 hover:underline">
         <h3 className="font-bold">{post.title}</h3>
       </Link>
       <p className="text-[0.9rem] font-light text-gray-400">
