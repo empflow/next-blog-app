@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import HomepageRecentPosts from "./components/HomepageRecentPosts";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -19,6 +20,15 @@ export default function Home() {
 
       <section>
         <HomepageRecentPosts />
+        <Link
+          className="mt-3 flex items-center gap-2 font-bold hover:underline"
+          href="/posts"
+        >
+          <span>All posts</span>
+          <span>
+            <AiOutlineArrowRight className="text-xl" />
+          </span>
+        </Link>
       </section>
     </>
   );
