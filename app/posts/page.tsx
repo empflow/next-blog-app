@@ -1,5 +1,10 @@
 import getLatestPosts from "@/helpers/getLatestPosts";
 import PostCard from "../components/PostCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "All posts",
+};
 
 export default function Posts() {
   const posts = getLatestPosts();
