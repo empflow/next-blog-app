@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-a:any-link {
+article a:any-link {
   text-decoration: underline;
 }
