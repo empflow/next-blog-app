@@ -4,7 +4,7 @@ import ThemeSwitcher from "./ThemeSwticher";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-t-gray-400 px-3 py-6">
+    <footer className="border-t border-t-gray-400 px-3 py-6 dark:border-gray-700">
       <div className="m-auto max-w-4xl">
         <div className="mb-5 flex justify-between">
           <div>

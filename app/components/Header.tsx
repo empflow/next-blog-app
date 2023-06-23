@@ -6,7 +6,7 @@ import Logo from "./Logo";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 border-b border-b-gray-400 bg-gray-100 px-3 py-5 backdrop-blur-lg dark:bg-slate-800">
+    <header className="sticky top-0 z-10 border-b border-b-gray-400 bg-gray-100 px-3 py-5 backdrop-blur-lg dark:border-b-gray-700 dark:bg-slate-800">
       <nav className="m-auto flex max-w-4xl justify-between">
         <Link href="/" style={{ textDecoration: "none" }}>
           <Logo />

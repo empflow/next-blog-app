@@ -7,7 +7,7 @@ export default function HomepageRecentPosts() {
   return (
     <section>
       <h2 className="mb-4 text-3xl font-medium">Recent posts</h2>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-4">
         {posts.map((post, i) => (
           <PostCard post={post} key={i} />
         ))}
