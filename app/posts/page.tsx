@@ -8,8 +8,8 @@ export default function Posts() {
     <>
       <h1 className="mb-8 text-3xl font-semibold">All posts</h1>
       <section className="flex flex-col gap-4">
-        {posts.map((post) => (
-          <PostCard post={post} />
+        {posts.map((post, i) => (
+          <PostCard post={post} key={i} />
         ))}
       </section>
     </>
