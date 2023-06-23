@@ -33,10 +33,13 @@ export default async function Post({ params: { postId } }: PostParams) {
       <p className="font-light text-gray-600 dark:text-gray-400">{post.date}</p>
       <article
         className="
-        prose
-      text-gray-500
+        prose-
+      prose
+        text-gray-600
+      prose-p:text-gray-600
         prose-a:font-semibold
-      prose-a:text-gray-900
+        prose-a:text-gray-900
+        prose-blockquote:text-gray-700
 
       dark:text-gray-400
       dark:prose-a:text-gray-200

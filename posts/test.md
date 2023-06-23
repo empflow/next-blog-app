@@ -136,3 +136,12 @@ lorem ipsum here is some paragraph text that does not have any real meaning
 ## images
 
 ![](https://markdown-here.com/img/icon256.png "markdown logo")
+
+---
+
+## table
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | title       |
+| Paragraph | text        |

@@ -2,8 +2,12 @@ import path from "path";
 import postsDir from "./postsDir";
 import fs from "fs";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkHtmlPlugin from "remark-html";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm"; // github flavored markdown
+import remarkRehype from "remark-rehype";
+import rehypeFormat from "rehype-format";
+import rehypeStringify from "rehype-stringify";
 import formatStrDate from "@/utils/formatStrDate";
 
 export default async function getPost(
@@ -24,8 +28,12 @@ export default async function getPost(
 
 async function getPostHtmlFromMarkdown(postMarkdown: string) {
   const { content: markdownContent } = matter(postMarkdown);
-  const processedContent = await remark()
-    .use(remarkHtmlPlugin)
+  const file = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeFormat)
+    .use(rehypeStringify)
     .process(markdownContent);
-  return processedContent.toString();
+  return file.toString();
 }
