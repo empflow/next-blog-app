@@ -36,6 +36,7 @@ export default async function Post({ params: { postId } }: PostParams) {
         prose
 
       text-gray-600
+      prose-headings:text-black
       prose-p:text-gray-600
       prose-a:font-semibold
       prose-a:text-gray-900
@@ -46,15 +47,15 @@ export default async function Post({ params: { postId } }: PostParams) {
       prose-pre:border-gray-300
       prose-pre:bg-gray-200
       dark:text-gray-400
+      dark:prose-headings:text-white
       dark:prose-p:text-gray-400
       dark:prose-a:text-gray-200
       dark:prose-blockquote:text-gray-300
       dark:prose-figcaption:text-gray-300
-      dark:prose-strong:text-gray-300
+      dark:prose-strong:text-gray-200
       dark:prose-code:text-white
       dark:prose-pre:border-gray-600
-      dark:prose-pre:bg-gray-700
-
+        dark:prose-pre:bg-gray-700
         "
         dangerouslySetInnerHTML={{ __html: post.htmlContent }}
       ></article>
