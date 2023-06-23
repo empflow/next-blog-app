@@ -50,7 +50,8 @@ export default async function Post({ params: { postId } }: PostParams) {
       dark:prose-headings:text-white
       dark:prose-p:text-gray-400
       dark:prose-a:text-gray-200
-      dark:prose-blockquote:text-gray-300
+      dark:prose-blockquote:border-gray-500
+      dark:prose-blockquote:text-gray-400
       dark:prose-figcaption:text-gray-300
       dark:prose-strong:text-gray-200
       dark:prose-code:text-white
