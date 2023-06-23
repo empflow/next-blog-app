@@ -33,19 +33,38 @@ export default async function Post({ params: { postId } }: PostParams) {
       <p className="font-light text-gray-600 dark:text-gray-400">{post.date}</p>
       <article
         className="
-        prose-
-      prose
-        text-gray-600
-      prose-p:text-gray-600
-        prose-a:font-semibold
-        prose-a:text-gray-900
-        prose-blockquote:text-gray-700
+        prose
 
+      text-gray-600
+      prose-p:text-gray-600
+      prose-a:font-semibold
+      prose-a:text-gray-900
+
+      prose-blockquote:text-gray-800
+      prose-code:text-black
+      prose-pre:border
+      prose-pre:border-gray-300
+      prose-pre:bg-gray-200
       dark:text-gray-400
+      dark:prose-p:text-gray-400
       dark:prose-a:text-gray-200
+      dark:prose-blockquote:text-gray-300
+      dark:prose-figcaption:text-gray-300
+      dark:prose-strong:text-gray-300
+      dark:prose-code:text-white
+      dark:prose-pre:border-gray-600
+      dark:prose-pre:bg-gray-700
+
         "
         dangerouslySetInnerHTML={{ __html: post.htmlContent }}
       ></article>
     </>
   );
 }
+
+/*
+prose-code:text-black
+prose-pre:border
+prose-pre:border-gray-400
+prose-pre:bg-gray-200
+*/
