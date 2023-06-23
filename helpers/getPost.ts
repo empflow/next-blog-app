@@ -9,12 +9,14 @@ import remarkRehype from "remark-rehype";
 import rehypeFormat from "rehype-format";
 import rehypeStringify from "rehype-stringify";
 import formatStrDate from "@/utils/formatStrDate";
+import getReadingTime from "@/utils/getReadingTime";
 
 export default async function getPost(
   postId: string
 ): Promise<PostWithHtmlContent> {
   const pathToPost = path.join(postsDir, `${postId}.md`);
   const postMarkdownContent = fs.readFileSync(pathToPost, "utf-8");
+  const readingTime = getReadingTime(postMarkdownContent);
   const { data: postData } = matter(postMarkdownContent);
   const postHtmlContent = await getPostHtmlFromMarkdown(postMarkdownContent);
 
@@ -23,6 +25,7 @@ export default async function getPost(
     title: postData.title,
     date: formatStrDate(postData.date),
     htmlContent: postHtmlContent,
+    readingTime,
   };
 }
 

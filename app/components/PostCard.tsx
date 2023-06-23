@@ -13,7 +13,10 @@ export default function PostCard({ post }: PostCardProps) {
       <Link href={`/posts/${post.id}`}>
         <h3 className="font-bold">{post.title}</h3>
       </Link>
-      <p className="text-[0.9rem] font-light text-gray-400">{formattedDate}</p>
+      <p className="text-[0.9rem] font-light text-gray-400">
+        {formattedDate} · {post.readingTime.value} {post.readingTime.timeUnit}{" "}
+        read
+      </p>
     </div>
   );
 }
