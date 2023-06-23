@@ -56,6 +56,8 @@ export default async function Post({ params: { postId } }: PostParams) {
       dark:prose-code:text-white
       dark:prose-pre:border-gray-600
         dark:prose-pre:bg-gray-700
+        dark:prose-thead:border-y-gray-500
+        dark:prose-tr:border-y-gray-500
         "
         dangerouslySetInnerHTML={{ __html: post.htmlContent }}
       ></article>
