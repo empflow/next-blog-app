@@ -17,7 +17,7 @@ export async function generateMetadata({
 }: PostParams): Promise<Metadata> {
   const posts = getLatestPosts();
   const currPost = posts.find((post) => post.id === postId);
-  if (!currPost) return { title: "Post Not Found" };
+  if (!currPost) return { title: "Post not found" };
   return { title: currPost.title };
 }
 
