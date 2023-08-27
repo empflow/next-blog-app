@@ -1,4 +1,4 @@
-import getLatestPosts from "@/helpers/getLatestPosts";
+import getPosts from "@/helpers/getPosts";
 import PostCard from "../components/PostCard";
 import { Metadata } from "next";
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function Posts() {
-  const posts = getLatestPosts();
+  const posts = getPosts();
 
   return (
     <>

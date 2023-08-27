@@ -4,20 +4,20 @@ export default function formatStrDate(dateStrToFormat: string) {
     .map((timeUnit) => parseInt(timeUnit));
 
   const dateObj = new Date(`${month}/${day}/${year}`);
-  return `${months[dateObj.getMonth()]} ${day}, ${year}`;
+  return `${day} ${months[dateObj.getMonth()]}, ${year}`;
 }
 
 const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
+  "Января",
+  "Февраля",
+  "Марта",
+  "Апреля",
+  "Мая",
+  "Июня",
+  "Июля",
+  "Августа",
+  "Сентября",
+  "Октября",
+  "Ноября",
+  "Декабря",
 ];
