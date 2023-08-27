@@ -3,12 +3,11 @@ import path from "path";
 import matter from "gray-matter";
 import strDatesToMsDates from "@/utils/strDatesToMsDates";
 import postsDir from "./postsDir";
-import getReadingTime from "@/utils/getReadingTime";
 
-export default function getLatestPosts(limit?: number) {
+export default function getPosts() {
   const postsFilenames = fs.readdirSync(postsDir);
   const allPosts = getAllPostsUnsorted(postsFilenames);
-  return sortPostsByDate(allPosts).slice(0, limit ?? allPosts.length);
+  return sortPostsByDate(allPosts);
 }
 
 function getAllPostsUnsorted(postsFilenames: string[]) {
@@ -17,13 +16,11 @@ function getAllPostsUnsorted(postsFilenames: string[]) {
     const pathToPost = path.join(postsDir, postFilename);
     const postContent = fs.readFileSync(pathToPost, "utf-8");
     const matterResult = matter(postContent);
-    const readingTime = getReadingTime(matterResult.content);
 
     return {
       id,
       title: matterResult.data.title,
       date: matterResult.data.date,
-      readingTime,
     };
   });
 }

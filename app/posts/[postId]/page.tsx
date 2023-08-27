@@ -1,4 +1,4 @@
-import getLatestPosts from "@/helpers/getLatestPosts";
+import getPosts from "@/helpers/getPosts";
 import getPost from "@/helpers/getPost";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -8,21 +8,21 @@ interface PostParams {
 }
 
 export async function generateStaticParams() {
-  const posts = getLatestPosts();
+  const posts = getPosts();
   return posts.map((post) => ({ postId: post.id }));
 }
 
 export async function generateMetadata({
   params: { postId },
 }: PostParams): Promise<Metadata> {
-  const posts = getLatestPosts();
+  const posts = getPosts();
   const currPost = posts.find((post) => post.id === postId);
   if (!currPost) return { title: "Post not found" };
   return { title: currPost.title };
 }
 
 export default async function Post({ params: { postId } }: PostParams) {
-  const posts = getLatestPosts();
+  const posts = getPosts();
   const postExists = !!posts.find((post) => post.id === postId);
   if (!postExists) return notFound();
 

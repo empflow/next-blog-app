@@ -1,11 +1,10 @@
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
 import Providers from "./providers";
 
 export const metadata = {
-  title: "Blog app",
-  description: "Made by @empflow on Github. Uses markdown for posts!",
+  title: "Произведения, которые я (возможно) прочитал летом",
+  description: "Что я прочитал летом",
 };
 
 export default function RootLayout({
@@ -21,7 +20,6 @@ export default function RootLayout({
           <main className="m-auto h-full w-full max-w-4xl flex-grow px-3 py-10">
             {children}
           </main>
-          <Footer />
         </Providers>
       </body>
     </html>
