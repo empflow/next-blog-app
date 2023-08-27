@@ -7,7 +7,7 @@ export default function NotFound() {
         The post you&apos;re looking for doesn&apos;t exist!
       </h1>
       <Link href="/posts">
-        <button className="rounded bg-blue-600 px-3 py-1 text-sm text-gray-50 dark:bg-blue-700">
+        <button className="rounded bg-blue-600 px-3 py-1 text-sm text-gray-50">
           Back to all posts
         </button>
       </Link>

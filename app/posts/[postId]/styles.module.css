@@ -1,0 +1,25 @@
+.prose table {
+  min-width: 600px;
+}
+
+.prose table tbody {
+}
+
+.prose td {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+.prose thead {
+  border: none;
+}
+
+.prose td:first-child {
+  color: rgb(40, 40, 40);
+  max-width: 30px;
+}
+
+.prose td:last-child {
+  font-weight: normal;
+  color: black;
+}

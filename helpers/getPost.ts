@@ -4,6 +4,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm"; // github flavored markdown
 import remarkRehype from "remark-rehype";
 import rehypeFormat from "rehype-format";
 import rehypeStringify from "rehype-stringify";
@@ -29,9 +30,25 @@ async function getPostHtmlFromMarkdown(postMarkdown: string) {
   const { content: markdownContent } = matter(postMarkdown);
   const file = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeFormat)
     .use(rehypeStringify)
     .process(markdownContent);
-  return file.toString();
+
+  let html = file.toString();
+  html = makeHtmlTablesScrollable(html);
+
+  return html;
+}
+
+function makeHtmlTablesScrollable(html: string) {
+  return html.replace(
+    /(<table.*?>[\s\S]*?<\/table>)/,
+    `
+        <div style="overflow-x: auto;">
+          $1
+        </div>
+      `
+  );
 }
