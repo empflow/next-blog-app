@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section className="mb-10">
-        <h1 className="mb-2 text-3xl font-semibold">Что я прочитал летом</h1>
+        <h1 className="mb-2 text-3xl font-semibold">Что я не прочитал летом</h1>
       </section>
 
       <section>
